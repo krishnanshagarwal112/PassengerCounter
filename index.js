@@ -1,5 +1,6 @@
 const incbtn = document.getElementById("increment-btn");
 const heading = document.getElementById("count-el");
+const saveEl = document.getElementById("save-El");
 let count = 0;
 
 // incbtn.addEventListener("click",function(){
@@ -9,11 +10,12 @@ let count = 0;
 function increment(){
 
     count = count+ 1;
-    heading.innerText = count;
+    heading.textContent = count;
 }
 
 function save(){
-    console.log(heading.innerHTML);
+    let content = count + " ~ ";
+    saveEl.textContent += content;
+    count = 0;
+    heading.textContent = count;
 }
-
-save()
